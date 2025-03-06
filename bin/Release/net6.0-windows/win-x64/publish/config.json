@@ -1,0 +1,17 @@
+{
+  "modelo": "GEHAKA BG 400",
+  "descricao": "GEHAKA BG 400",
+  "bitsDados": 7,
+  "paridade": 2,
+  "bitsParada": 1,
+  "porta": "COM1",
+  "controleFluxo": 5,
+  "velocidade": 4800,
+  "nomeMaquina": "localhost",
+  "semAutoPrint": false,
+  "comando": "",
+  "tempoEsperaLeitura": 0,
+  "tempoAtualizacao": 1000,
+  "id": "614544baa7f8b0c0d12c2641",
+  "tenantId": "646f6190-8a94-4751-887a-8405dcdcfe41"
+}
