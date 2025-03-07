@@ -4,14 +4,6 @@ E:\Impulso\Fagron\Projects\FormulaCerta.HI.TesteBalanca\bin\Release\net6.0-windo
 E:\Impulso\Fagron\Projects\FormulaCerta.HI.TesteBalanca\bin\Release\net6.0-windows\win-x64\FormulaCerta.HI.TesteBalanca.runtimeconfig.json
 E:\Impulso\Fagron\Projects\FormulaCerta.HI.TesteBalanca\bin\Release\net6.0-windows\win-x64\FormulaCerta.HI.TesteBalanca.dll
 E:\Impulso\Fagron\Projects\FormulaCerta.HI.TesteBalanca\bin\Release\net6.0-windows\win-x64\FormulaCerta.HI.TesteBalanca.pdb
-E:\Impulso\Fagron\Projects\FormulaCerta.HI.TesteBalanca\bin\Release\net6.0-windows\win-x64\Microsoft.Extensions.Logging.Abstractions.dll
-E:\Impulso\Fagron\Projects\FormulaCerta.HI.TesteBalanca\bin\Release\net6.0-windows\win-x64\RJCP.Core.Environment.dll
-E:\Impulso\Fagron\Projects\FormulaCerta.HI.TesteBalanca\bin\Release\net6.0-windows\win-x64\RJCP.Core.SysCompat.dll
-E:\Impulso\Fagron\Projects\FormulaCerta.HI.TesteBalanca\bin\Release\net6.0-windows\win-x64\RJCP.Diagnostics.Trace.dll
-E:\Impulso\Fagron\Projects\FormulaCerta.HI.TesteBalanca\bin\Release\net6.0-windows\win-x64\RJCP.IO.Buffer.dll
-E:\Impulso\Fagron\Projects\FormulaCerta.HI.TesteBalanca\bin\Release\net6.0-windows\win-x64\RJCP.IO.Device.dll
-E:\Impulso\Fagron\Projects\FormulaCerta.HI.TesteBalanca\bin\Release\net6.0-windows\win-x64\RJCP.SerialPortStream.dll
-E:\Impulso\Fagron\Projects\FormulaCerta.HI.TesteBalanca\bin\Release\net6.0-windows\win-x64\de\RJCP.Core.Environment.resources.dll
 E:\Impulso\Fagron\Projects\FormulaCerta.HI.TesteBalanca\bin\Release\net6.0-windows\win-x64\Microsoft.CSharp.dll
 E:\Impulso\Fagron\Projects\FormulaCerta.HI.TesteBalanca\bin\Release\net6.0-windows\win-x64\Microsoft.VisualBasic.Core.dll
 E:\Impulso\Fagron\Projects\FormulaCerta.HI.TesteBalanca\bin\Release\net6.0-windows\win-x64\Microsoft.VisualBasic.dll
@@ -245,3 +237,5 @@ E:\Impulso\Fagron\Projects\FormulaCerta.HI.TesteBalanca\obj\Release\net6.0-windo
 E:\Impulso\Fagron\Projects\FormulaCerta.HI.TesteBalanca\obj\Release\net6.0-windows\win-x64\FormulaCerta.HI.TesteBalanca.pdb
 E:\Impulso\Fagron\Projects\FormulaCerta.HI.TesteBalanca\obj\Release\net6.0-windows\win-x64\FormulaCerta.HI.TesteBalanca.genruntimeconfig.cache
 E:\Impulso\Fagron\Projects\FormulaCerta.HI.TesteBalanca\obj\Release\net6.0-windows\win-x64\ref\FormulaCerta.HI.TesteBalanca.dll
+E:\Impulso\Fagron\Projects\FormulaCerta.HI.TesteBalanca\bin\Release\net6.0-windows\win-x64\System.IO.Ports.dll
+E:\Impulso\Fagron\Projects\FormulaCerta.HI.TesteBalanca\obj\Release\net6.0-windows\win-x64\FormulaCerta.HI.TesteBalanca.sourcelink.json

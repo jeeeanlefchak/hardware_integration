@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FormulaCerta.HI.TesteBalanca")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+391f32dc004e2a5b3281c5fca41300300d9bc874")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+48537c6068c3d08222b316ba10b31ead4056d8d9")]
 [assembly: System.Reflection.AssemblyProductAttribute("FormulaCerta.HI.TesteBalanca")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FormulaCerta.HI.TesteBalanca")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

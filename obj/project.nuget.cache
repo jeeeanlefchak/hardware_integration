@@ -1,16 +1,23 @@
 {
   "version": 2,
-  "dgSpecHash": "vxopG65UcHg=",
+  "dgSpecHash": "+F12vujymGA=",
   "success": true,
   "projectFilePath": "E:\\Impulso\\Fagron\\Projects\\FormulaCerta.HI.TesteBalanca\\FormulaCerta.HI.TesteBalanca.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\jean_\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.4\\microsoft.extensions.logging.abstractions.6.0.4.nupkg.sha512",
-    "C:\\Users\\jean_\\.nuget\\packages\\rjcp.core.environment\\0.3.0\\rjcp.core.environment.0.3.0.nupkg.sha512",
-    "C:\\Users\\jean_\\.nuget\\packages\\rjcp.core.syscompat\\0.2.0\\rjcp.core.syscompat.0.2.0.nupkg.sha512",
-    "C:\\Users\\jean_\\.nuget\\packages\\rjcp.diagnostics.trace\\0.2.1\\rjcp.diagnostics.trace.0.2.1.nupkg.sha512",
-    "C:\\Users\\jean_\\.nuget\\packages\\rjcp.io.buffer\\0.2.1\\rjcp.io.buffer.0.2.1.nupkg.sha512",
-    "C:\\Users\\jean_\\.nuget\\packages\\rjcp.io.device\\0.8.1\\rjcp.io.device.0.8.1.nupkg.sha512",
-    "C:\\Users\\jean_\\.nuget\\packages\\rjcp.serialportstream\\3.0.1\\rjcp.serialportstream.3.0.1.nupkg.sha512"
+    "C:\\Users\\jean_\\.nuget\\packages\\runtime.linux-arm.runtime.native.system.io.ports\\6.0.0\\runtime.linux-arm.runtime.native.system.io.ports.6.0.0.nupkg.sha512",
+    "C:\\Users\\jean_\\.nuget\\packages\\runtime.linux-arm64.runtime.native.system.io.ports\\6.0.0\\runtime.linux-arm64.runtime.native.system.io.ports.6.0.0.nupkg.sha512",
+    "C:\\Users\\jean_\\.nuget\\packages\\runtime.linux-x64.runtime.native.system.io.ports\\6.0.0\\runtime.linux-x64.runtime.native.system.io.ports.6.0.0.nupkg.sha512",
+    "C:\\Users\\jean_\\.nuget\\packages\\runtime.native.system.io.ports\\6.0.0\\runtime.native.system.io.ports.6.0.0.nupkg.sha512",
+    "C:\\Users\\jean_\\.nuget\\packages\\runtime.osx-arm64.runtime.native.system.io.ports\\6.0.0\\runtime.osx-arm64.runtime.native.system.io.ports.6.0.0.nupkg.sha512",
+    "C:\\Users\\jean_\\.nuget\\packages\\runtime.osx-x64.runtime.native.system.io.ports\\6.0.0\\runtime.osx-x64.runtime.native.system.io.ports.6.0.0.nupkg.sha512",
+    "C:\\Users\\jean_\\.nuget\\packages\\system.io.ports\\6.0.0\\system.io.ports.6.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://tfs.fagrontechnologies.com.br/tfs/FagronTechnologiesBR/_packaging/FagronTech/nuget/v3/index.json."
+    }
+  ]
 }

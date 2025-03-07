@@ -226,11 +226,4 @@ E:\Impulso\Fagron\Projects\FormulaCerta.HI.TesteBalanca\bin\Release\net6.0-windo
 E:\Impulso\Fagron\Projects\FormulaCerta.HI.TesteBalanca\bin\Release\net6.0-windows\win-x64\publish\mscorrc.dll
 E:\Impulso\Fagron\Projects\FormulaCerta.HI.TesteBalanca\bin\Release\net6.0-windows\win-x64\publish\msquic.dll
 E:\Impulso\Fagron\Projects\FormulaCerta.HI.TesteBalanca\bin\Release\net6.0-windows\win-x64\publish\ucrtbase.dll
-E:\Impulso\Fagron\Projects\FormulaCerta.HI.TesteBalanca\bin\Release\net6.0-windows\win-x64\publish\Microsoft.Extensions.Logging.Abstractions.dll
-E:\Impulso\Fagron\Projects\FormulaCerta.HI.TesteBalanca\bin\Release\net6.0-windows\win-x64\publish\RJCP.Core.Environment.dll
-E:\Impulso\Fagron\Projects\FormulaCerta.HI.TesteBalanca\bin\Release\net6.0-windows\win-x64\publish\RJCP.Core.SysCompat.dll
-E:\Impulso\Fagron\Projects\FormulaCerta.HI.TesteBalanca\bin\Release\net6.0-windows\win-x64\publish\RJCP.Diagnostics.Trace.dll
-E:\Impulso\Fagron\Projects\FormulaCerta.HI.TesteBalanca\bin\Release\net6.0-windows\win-x64\publish\RJCP.IO.Buffer.dll
-E:\Impulso\Fagron\Projects\FormulaCerta.HI.TesteBalanca\bin\Release\net6.0-windows\win-x64\publish\RJCP.IO.Device.dll
-E:\Impulso\Fagron\Projects\FormulaCerta.HI.TesteBalanca\bin\Release\net6.0-windows\win-x64\publish\RJCP.SerialPortStream.dll
-E:\Impulso\Fagron\Projects\FormulaCerta.HI.TesteBalanca\bin\Release\net6.0-windows\win-x64\publish\de\RJCP.Core.Environment.resources.dll
+E:\Impulso\Fagron\Projects\FormulaCerta.HI.TesteBalanca\bin\Release\net6.0-windows\win-x64\publish\System.IO.Ports.dll

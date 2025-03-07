@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.IO.Ports;
 using System.Text.Json;
 using System.Text.Json.Serialization;
-using RJCP.IO.Ports;
 
 class Program
 {
@@ -58,89 +58,59 @@ public class SerialService
     {
         LogInfo("INICIANDO LEITURA DA BALANÇA");
 
-        using (var porta = new SerialPortStream())
+        SerialPort porta = new SerialPort();
+        try
         {
-            try
-            {
-                PreencherDadosPorta(porta, balanca);
-                LogInfo($"ABRINDO PORTA {porta.PortName}");
+            PreencherDadosPorta(porta, balanca);
+            LogInfo($"ABRINDO PORTA {porta.PortName}");
+            porta.Open();
+            LogInfo("PORTA ABERTA");
 
-                porta.Open();
-                LogInfo("PORTA ABERTA");
+            if (balanca.SemAutoPrint)
+                ProcessarComando(porta, balanca.Comando, balanca.TempoEsperaLeitura);
 
-                if (balanca.SemAutoPrint)
-                    ProcessarComando(porta, balanca.Comando, balanca.TempoEsperaLeitura);
+            LogInfo("LENDO PESO DA BALANÇA");
+            var retornoBalanca = porta.ReadLine();
+            LogInfo("DADO RECEBIDO: " + retornoBalanca);
 
-                LogInfo("LENDO PESO DA BALANÇA");
-                porta.Flush();
+            porta.Close();
 
-                string retornoBalanca = LerLinha(porta);
-                LogInfo("DADO RECEBIDO: " + retornoBalanca);
-
-
-                List<string> retornoBalanca2 = LerLinhas(porta, 100);
-                LogInfo("DADO RECEBIDO2: " + retornoBalanca2.ToString());
-
-                return new BalancaResponse(retornoBalanca, string.Empty);
-            }
-            catch (UnauthorizedAccessException ex) // Falta de permissão para acessar a porta
-            {
-                LogErro("Acesso negado à porta COM. Execute como administrador. " + ex.Message);
-                return new BalancaResponse(null, "Acesso negado à porta COM. Verifique as permissões.");
-            }
-            catch (IOException ex) // Problema físico ou erro de comunicação
-            {
-                LogErro("Erro de I/O na comunicação com a balança: " + ex.Message);
-                return new BalancaResponse(null, "Erro de comunicação com a balança. Verifique os cabos e a conexão.");
-            }
-            catch (ArgumentException ex) // Configuração inválida da porta
-            {
-                LogErro("Configuração inválida da porta COM: " + ex.Message);
-                return new BalancaResponse(null, "Configuração da porta COM inválida. Verifique os parâmetros.");
-            }
-            catch (InvalidOperationException ex) // Tentando abrir uma porta já aberta
-            {
-                LogErro("Tentativa de abrir uma porta já em uso: " + ex.Message);
-                return new BalancaResponse(null, "A porta COM já está em uso por outro programa.");
-            }
-            catch (TimeoutException ex) // Resposta demorou muito
-            {
-                LogErro("Tempo limite atingido ao ler da balança: " + ex.Message);
-                return new BalancaResponse(null, "A balança não respondeu a tempo. Verifique a conexão.");
-            }
-            catch (Exception ex) // Erro genérico para capturar qualquer outro problema
-            {
-                LogErro("Erro inesperado na comunicação: " + ex.Message);
-                return new BalancaResponse(null, "Erro desconhecido. Detalhes: " + ex.Message);
-            }
+            return null;
+        }
+        catch (UnauthorizedAccessException ex) // Falta de permissão para acessar a porta
+        {
+            LogErro("Acesso negado à porta COM. Execute como administrador. " + ex.Message);
+            return new BalancaResponse(null, "Acesso negado à porta COM. Verifique as permissões.");
+        }
+        catch (IOException ex) // Problema físico ou erro de comunicação
+        {
+            LogErro("Erro de I/O na comunicação com a balança: " + ex.Message);
+            return new BalancaResponse(null, "Erro de comunicação com a balança. Verifique os cabos e a conexão.");
+        }
+        catch (ArgumentException ex) // Configuração inválida da porta
+        {
+            LogErro("Configuração inválida da porta COM: " + ex.Message);
+            return new BalancaResponse(null, "Configuração da porta COM inválida. Verifique os parâmetros.");
+        }
+        catch (InvalidOperationException ex) // Tentando abrir uma porta já aberta
+        {
+            LogErro("Tentativa de abrir uma porta já em uso: " + ex.Message);
+            return new BalancaResponse(null, "A porta COM já está em uso por outro programa.");
+        }
+        catch (TimeoutException ex) // Resposta demorou muito
+        {
+            LogErro("Tempo limite atingido ao ler da balança: " + ex.Message);
+            return new BalancaResponse(null, "A balança não respondeu a tempo. Verifique a conexão.");
+        }
+        catch (Exception ex) // Erro genérico para capturar qualquer outro problema
+        {
+            LogErro("Erro inesperado na comunicação: " + ex.Message);
+            return new BalancaResponse(null, "Erro desconhecido. Detalhes: " + ex.Message);
         }
     }
 
-    private string LerLinha(SerialPortStream porta)
-    {
-        using (var reader = new StreamReader(porta))
-        {
-            return reader.ReadLine();
-        }
-    }
 
-    private List<string> LerLinhas(SerialPortStream porta, int quantidade)
-    {
-        List<string> linhas = new List<string>();
-
-        using (var reader = new StreamReader(porta))
-        {
-            for (int i = 0; i < quantidade; i++)
-            {
-                string linha = reader.ReadLine();
-                if (!string.IsNullOrEmpty(linha))
-                    linhas.Add(linha);
-            }
-        }
-        return linhas;
-    }
-
-    private void PreencherDadosPorta(SerialPortStream porta, BalancaRequest balanca)
+    private void PreencherDadosPorta(SerialPort porta, BalancaRequest balanca)
     {
         porta.PortName = balanca.Porta;
         porta.BaudRate = balanca.Velocidade;
@@ -150,7 +120,7 @@ public class SerialService
         porta.ReadTimeout = 10000;
     }
 
-    private void ProcessarComando(SerialPortStream porta, string comando, int tempoEspera)
+    private void ProcessarComando(SerialPort porta, string comando, int tempoEspera)
     {
         porta.WriteLine(comando);
         System.Threading.Thread.Sleep(tempoEspera);
